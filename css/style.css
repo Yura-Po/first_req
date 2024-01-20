@@ -1,1 +1,38 @@
-/* Hello */
+.block-body{
+  max-width: 1680px;
+  height: auto;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.block-header{
+    max-width: 1680px;
+    min-height: 230px;
+    border: 1px solid black;
+}
+
+.block-right{
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    float: right;
+}
+
+.block-content{
+    max-width: 1350px;
+    height: 400px;
+    border: 1px solid black;
+}
+
+.header-top-block{
+    max-width: 1680px;
+    min-height: 37px;
+    border: 1px solid black;
+}
+
+.block-footer{
+    max-width: 1680px;
+    min-height: 160px;
+    margin: 10px 0px 0px 0px;
+    border: 1px solid black;
+}
