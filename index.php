@@ -17,10 +17,13 @@
     ?>
     </div>
 
-<div class="block-right"></div>
+<div class="block-content-and-right">
 
 <div class="block-content"></div>
-    
+
+<div class="block-right"></div>
+
+</div>
 
 <?php
 include("modules/block-footer.php");
