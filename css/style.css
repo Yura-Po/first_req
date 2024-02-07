@@ -1,3 +1,4 @@
+/* font-family: 'Roboto', sans-serif; */
 .block-body{
   max-width: 1680px;
   height: auto;
@@ -49,8 +50,7 @@
 
 .header-top-menu li{
 float: left;
-font-family:'Courier New', Courier, monospace;
-font-weight:bolder;
+font-family: 'Lobster', sans-serif;
 font-size: 20px;
 margin: 10px 0px 0px 0px;
 padding: 0px 10px 0px 10px;
@@ -72,7 +72,7 @@ border-right: 1px solid #a09f9d;
 }
 
 .reg-auth-title{
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Lobster', sans-serif;
     font-weight:bolder;
     font-size: 18px;
     margin: 10px 10px 0px 0px;
