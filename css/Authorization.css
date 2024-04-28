@@ -1,0 +1,94 @@
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background: url("../Project-Foto/pod_vodoj.jpg");
+}
+
+.form-block{
+    width: 400px;
+    padding: 30px 40px;
+    border: 2px solid #184d46;
+    border-radius: 4px;
+    background: #fff;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label{
+    color: #184d46;
+}
+
+input{
+    margin: 10px 0px;
+    border-bottom: 2px solid #184d46;
+    outline: none;
+    font-size: 20px;
+    color: #184d46;
+    /* padding: 10px 0px; */
+}
+
+.passLine{
+    display: flex;
+    align-items: center;
+}
+
+.passinput{
+    margin: 10px 20px 10px 0px;
+    padding: 0px 50px 0px 0px;
+}
+
+.sauron-div:hover{
+background: #184d46;
+border-radius: 7px;
+transition: all 0.3s ease 0s;
+cursor: pointer;
+}
+
+.sauron{
+    max-width: 30px;
+}
+
+.button_form{
+    background: #184d46;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.button_form:hover{
+    background: #2d9b8c;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+.silki-div{
+    color: #184d46;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.silki-a{
+    color: #184d46;
+    margin: 5px;
+}
+
+.silki-a:hover{
+    color: #34bba9;
+    transition: all 0.3s ease 0s;
+}

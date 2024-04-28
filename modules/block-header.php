@@ -1,3 +1,4 @@
+<?php session_start();?>
 <header class="header">
     <div class="header__container">
         <a href="#" class="header__logo"></a>
@@ -21,7 +22,12 @@
                     </li>
                     <li><a href="" class="menu__link">Про нас</a></li>
                     <li><a href="" class="menu__link">Контакти</a></li>
-                    <li><a href="" class="menu__link">Вхід</a></li>
+                    <li><?php if($_SESSION['user']!= null){
+                      echo '<a href="modules/logout.php" class="menu__link">Вихід</a></li>';  
+                    }else{
+                        echo '<a href="modules/Authorization.php" class="menu__link">Вхід</a></li>';
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>
