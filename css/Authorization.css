@@ -92,3 +92,21 @@ cursor: pointer;
     color: #34bba9;
     transition: all 0.3s ease 0s;
 }
+
+.msg{
+    border: 2px solid #e9380b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.none{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.error_{
+    border-bottom: 2px solid #e9380b;
+}

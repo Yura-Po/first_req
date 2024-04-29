@@ -19,7 +19,7 @@ if($_SESSION['user']){
 </head>
 <body>
     <div class="form-block">
-    <form action="Autoriz-back.php" method="post">
+    <form>
     <label>Email:</label>
     <input type="email" name="Email" placeholder="Введіть Email...">
     <label>PassWord:</label>
@@ -29,12 +29,14 @@ if($_SESSION['user']){
     <img class="sauron" src="../Project-Foto/118191.png">
     </div>
     </div>
-    <button type="submit" class="button_form">Увійти</button>
+    <button type="submit" class="button_form login-btn">Увійти</button>
     <div class="silki-div"><a href="#" class="silki-a">Забули пароль?</a>
     <a href="Registration.php" class="silki-a">Реєстрація</a>
     </div>
+    <div class="msg none"><span>Lorem, ipsum dolor sit </span></div>
     </form>
     </div>
+    <script src="../js/jquery-3.7.1.js"></script>
     <script src="../js/Authorization.js"></script>
 </body>
 </html>

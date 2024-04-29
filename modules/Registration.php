@@ -20,7 +20,7 @@ if($_SESSION['user']){
 <body>
 <div class="form-block">
 <div class="form-block-first">
-    <form action="signup.php" method="post" enctype="multipart/form-data">
+    <form>
     <label>Ім'я:</label>
     <input type="text" name="name" placeholder="Введіть ім'я...">
     <label>Прізвище:</label>
@@ -63,13 +63,15 @@ if($_SESSION['user']){
     </div>
     </div>
     <input class="passinput-two" name="passWordDouble" type="password" placeholder="Повторіть Пароль...">
-    <button type="submit" class="button_form">Створити</button>
+    <button type="submit" class="button_form registr-btn">Створити</button>
     
     <div class="silki-div"><a href="Authorization.php" class="silki-a">Маєте акаунт?</a>
     </div>
+    <div class="msg none"><span>Lorem, ipsum dolor sit </span></div>
     </div>
     </form>
 </div>
+<script src="../js/jquery-3.7.1.js"></script>
     <script src="../js/Authorization.js"></script>
 </body>
 </html>

@@ -103,7 +103,7 @@ cursor: pointer;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-top: 150px;
+    margin-top: 100px;
     margin-bottom: 10px;
     font-size: 22px;
     width: 100%;
@@ -138,4 +138,22 @@ select{
     font-size: 18px;
     border-bottom: 2px solid #184d46;
     margin: 5px 0px;
+}
+
+.msg{
+    border: 2px solid #e9380b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.none{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.error_{
+    border-bottom: 2px solid #e9380b;
 }
