@@ -4,8 +4,8 @@ ini_set('display_startup_errors', 0);
 error_reporting(E_ALL);
 session_start();
 include("db_connect.php");
-if($_SESSION['user']){
-    header('Location: ../index.php');
+if(!$_SESSION['user']){
+    header('Location: Authorization.php');
 }
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ if($_SESSION['user']){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/Registration.css">
+    <link rel="stylesheet" href="../css/Smena.css">
     <link rel="shortcut icon" href="../Project-Foto/iconCompas.png" type="image/png">
     <title>Авторизація</title>
 </head>
@@ -23,20 +23,20 @@ if($_SESSION['user']){
 <div class="form-block-first">
     <form>
     <label>Ім'я:</label>
-    <input type="text" name="name" placeholder="Введіть ім'я...">
+    <input type="text" name="name" placeholder="Введіть ім'я..." value='<?= $_SESSION['user']['Name']?>'>
     <label>Прізвище:</label>
-    <input type="text" name="Surname" placeholder="Введіть Прізвище...">
+    <input type="text" name="Surname" placeholder="Введіть Прізвище..." value='<?= $_SESSION['user']['SurName']?>'>
     <label>По-батькові:</label>
-    <input type="text" name="Batko" placeholder="Введіть по-батькові...">
+    <input type="text" name="Batko" placeholder="Введіть по-батькові..." value='<?= $_SESSION['user']['Father']?>'>
     <label>Стать:</label>
-    <select name="sex">
+    <select name="sex" value='<?= $_SESSION['user']['Sex']?>'>
         <option value="1">Чоловіча</option>
         <option value="2">Жіноча</option>
     </select>
     <label>Дата народження:</label>
-    <input type="date" name="Age" placeholder="Вкажіть Вік...">
+    <input type="date" name="Age" placeholder="Вкажіть Вік..." value='<?= $_SESSION['user']['Age']?>'>
     <label>Країна:</label>
-    <select name="Country">
+    <select name="Country" value='<?= $_SESSION['user']['Country']?>'>
         <option value="1">Україна</option>
         <option value="2">Америка</option>
         <option value="3">Англія</option>
@@ -53,9 +53,9 @@ if($_SESSION['user']){
     </div>
 <div class="form-block-two">
     <label class="label-two">Тел:</label>
-    <input class="input-two" type="text" name="Telef" placeholder="Введіть Телефон...">
+    <input class="input-two" type="text" name="Telef" placeholder="Введіть Телефон..." value='<?= $_SESSION['user']['Tel']?>'>
     <label class="label-two">Email:</label>
-    <input class="input-two" type="email" name="Email" placeholder="Введіть Email...">
+    <input class="input-two" type="email" name="Email" placeholder="Введіть Email..." value='<?= $_SESSION['user']['Email']?>'>
     <label>PassWord:</label>
     <div class="passLine">
     <input class="passinput" name="passWord" type="password" placeholder="Введіть Пароль...">
@@ -64,11 +64,10 @@ if($_SESSION['user']){
     </div>
     </div>
     <input class="passinput-two" name="passWordDouble" type="password" placeholder="Повторіть Пароль...">
-    <button type="submit" class="button_form registr-btn">Створити</button>
-    
-    <div class="silki-div"><a href="Authorization.php" class="silki-a">Маєте акаунт?</a>
-    </div>
+    <button type="submit" class="button_form samena-btn">Створити</button>
     <div class="msg none"><span>Lorem, ipsum dolor sit </span></div>
+    </div>
+    
     </div>
     </form>
 </div>

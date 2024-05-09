@@ -9,7 +9,7 @@
             <nav class="menu__body">
                 <ul class="menu__list">
                     <li>
-                        <a href="" class="menu__link">Послуги</a>
+                        <a href="" class="menu__link">Можливості</a>
                         <span class="menu__arrow"></span>
                         <ul class="menu__sub-list">
                             <li>
@@ -18,6 +18,15 @@
                             <li>
                             <a href="" class="menu__sub-link">Залишити відгук</a>
                             </li>
+                            <?php if($_SESSION['user']!= null){
+                      echo '<li>
+                      <span class="menu__sub-link span-akaunt">Акаунт</span>
+                      </li>';  
+                    }else{
+                        echo '';
+                    }
+                    ?>
+                            
                         </ul>
                     </li>
                     <li><a href="" class="menu__link">Про нас</a></li>

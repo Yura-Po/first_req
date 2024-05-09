@@ -112,10 +112,12 @@ if($passWord === $passWordDouble){
         
         echo json_encode($response);
     }
-    mysqli_query($link,"INSERT INTO `User`( `Name`, `SurName`, `Father`, 
-    `Sex`, `Age`, `Tel`, `Email`, `passWord`, `Country`, `Foto`) VALUES 
-    ('$name','$Surname','$Batko','$Sex','$Age',
-    '$Telef','$Email','$passWord','$Country','$path')");
+    $new_danii=$_SESSION['user']['Email'];
+    mysqli_query($link,"UPDATE `User` SET `Name`='$name',`SurName`='$Surname',
+    `Father`='$Batko',`Sex`='$Sex',
+    `Age`='$Age',`Tel`='$Telef',
+    `Email`='$Email',`passWord`='$passWord',
+    `Country`='$Country',`Foto`='$path' WHERE `Email`='$new_danii'");
 
 $response = [
     "status"=>true,

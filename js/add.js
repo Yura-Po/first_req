@@ -51,3 +51,9 @@ if(iconMenu){
         menuBody.classList.toggle('_active');
     });
 }
+
+const showAcaunt = document.querySelector('.span-akaunt');
+const Acaunt = document.querySelector('.profile');
+showAcaunt.addEventListener("click",function(e){
+Acaunt.classList.toggle("non-akaunt");
+});

@@ -104,3 +104,63 @@ $('.registr-btn').click(function(e){
      });
 
 });
+
+
+
+
+// ----------------------------------------Зміна даних
+
+$('.samena-btn').click(function(e){
+
+    e.preventDefault();
+
+    $(`input`).removeClass('error_');
+
+    let name = $('input[name="name"]').val(),
+    Surname = $('input[name="Surname"]').val(),
+    Batko = $('input[name="Batko"]').val(),
+    sex = $('select[name="sex"]').val(),
+    Age = $('input[name="Age"]').val(),
+    Country = $('select[name="Country"]').val(),
+    Telef = $('input[name="Telef"]').val(),
+    Email = $('input[name="Email"]').val(),
+    passWord = $('input[name="passWord"]').val(),
+    passWordDouble = $('input[name="passWordDouble"]').val();
+
+    let formData = new FormData();
+            formData.append('name', name);
+            formData.append('Surname', Surname);
+            formData.append('Batko', Batko);
+            formData.append('sex', sex);
+            formData.append('Age', Age);
+            formData.append('Country', Country);
+            formData.append('Telef', Telef);
+            formData.append('Email', Email);
+            formData.append('passWord', passWord);
+            formData.append('passWordDouble', passWordDouble);
+            formData.append('Avatar', Avatar);
+
+     $.ajax({
+        url: '../modules/SmenaDaniiAka-back.php',
+        type: 'POST',
+        dataType: 'json',
+        processData:false,
+        contentType:false,
+        cache:false,
+        data:formData,
+        success (data){
+            if(data.status){
+                document.location.href = '../modules/logout.php';
+            }else{
+                if(data.type === 1){
+                    data.fields.forEach(function(field) {
+                        $(`input[name="${field}"]`).addClass('error_');
+                    });
+                }
+                $('.msg').removeClass('none').text(data.message);
+            }
+            
+        }
+     });
+
+});

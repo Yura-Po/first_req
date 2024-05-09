@@ -10,11 +10,8 @@ body._lock{
   margin: 0 auto;
 }
 
-.block-header{
-    max-width: 1680px;
-    min-height: 230px;
-    border: 1px solid black;
-}
+
+
 
 .block-content-and-right{
     display: flex;
@@ -63,7 +60,7 @@ body._lock{
 
 .header__logo{
     border-radius: 50%;
-    background: #fff;
+    background: url('../Project-Foto/compas.png')0 0/100% no-repeat;
     position: relative;
     z-index: 5;
     width: 40px;
@@ -283,4 +280,63 @@ transform: rotate(-180deg);
         font-size: 20px;
     }
 
+}
+
+.profile{
+    width: 500px;
+    height: 360px;
+    background: #09afa7;
+    border: 2px solid #000;
+    border-radius: 4px;
+    position: fixed;
+    left: 32%;
+    top: 20%;   
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 120px;
+}
+
+.profile-lvl1{
+    display: flex;
+    padding: 10px;
+    background: #066e69;
+    align-items: center;
+}
+
+.block-pib{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.block-info{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.block-info a{
+    color: #fff;
+}
+
+.block-info a:hover{
+    color: #707070;
+    transition: all 0.4s ease 0s;
+}
+
+.span-akaunt{
+    cursor: pointer;
+}
+
+.non-akaunt{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s ease 0s;
 }

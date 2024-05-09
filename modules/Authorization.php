@@ -15,6 +15,7 @@ if($_SESSION['user']){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/Authorization.css">
+    <link rel="shortcut icon" href="../Project-Foto/iconCompas.png" type="image/png">
     <title>Авторизація</title>
 </head>
 <body>
