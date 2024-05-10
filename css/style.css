@@ -1,15 +1,15 @@
-/* font-family: 'Roboto', sans-serif; */
+
 body._lock{
     overflow: hidden;
 }
 
-.block-body{
-  max-width: 1680px;
-  height: auto;
-  border: 1px solid black;
-  margin: 0 auto;
+body{
+    background: url("../Project-Foto/for_index.jpg")0 0/100% no-repeat fixed;
 }
 
+.block-header{
+    height: 80px;
+}
 
 
 
@@ -17,20 +17,9 @@ body._lock{
     display: flex;
     flex-direction: row;
     margin: 10px 0px;
+    justify-content: center;
 }
 
-.block-right{
-    width: 300px;
-    height: 400px;
-    border: 1px solid black;
-    margin: 0px 0px 0px 20px;
-}
-
-.block-content{
-     width: 1350px;/* AaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaaAaaaa */
-    height: 400px;
-    border: 1px solid black;
-}
 
 .block-footer{
     max-width: 1680px;
@@ -339,4 +328,192 @@ transform: rotate(-180deg);
         visibility: hidden;
         pointer-events: none;
         transition: all 0.3s ease 0s;
+}
+
+.img-daiving{
+    max-width: 150px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.daiving{
+    border: 2px solid #02806b;
+    margin: 10px;
+    width: 1060px ;
+    height: 220px;
+    background: #09afa7;
+}
+
+.daiving-name{
+display: flex;
+border-bottom: 2px solid #09afa7;
+height: 30px;
+background: #066e69;
+justify-content: space-between;
+align-items: center;
+padding: 0px 20px;
+color: #fff;
+font-size: 18px;
+}
+
+.daiving-opis{
+    display: flex;
+    padding: 15px;
+    color: #fff;
+    font-size: 20px;
+    font:700;
+    }
+
+.li-opis{
+    margin-left: 20px;
+}
+
+.daiving-Tsena{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 18px;
+    margin: 10px;
+    align-items: center;
+}
+
+.daiving-Button{
+    background-color: #df1111;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #fff;
+}
+
+.daiving-Button:hover{
+    background-color: #f30303;
+    border: 1px solid #bbb8b8;
+    color: #bbb8b8;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.sort-poshuk{
+    display: flex;
+}
+
+.sort-vipad{
+    position: relative;
+}
+
+.sort{
+    background: #02806b;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 25px;
+    color: #fff;
+    padding: 3px 5px 5px 5px;
+    margin-left: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.sort:hover{
+color: aliceblue;
+background: #066e69;
+cursor: pointer;
+}
+
+.sort-block{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #066e69;
+    margin-left: 10px;
+    width: 150px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    transition: all 0.3s ease 0s;
+}
+
+.sort-block a{
+    color: #fff;
+    font-size: 18px;
+    margin: 5px ;
+}
+
+.sort-block a:hover{
+    text-decoration: underline;
+}
+
+.none-sort{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease 0s; 
+}
+
+.block-Ekspert{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../Project-Foto/Dno.jpg")0 0/100% no-repeat fixed;
+}
+
+.text_Ekspert{
+    color: #fff;
+    font-size: 30px;
+    margin: 20px 0px;
+}
+
+.ekspert_foto{
+    max-width: 300px;
+}
+
+.info_Ekspert{
+    display: flex;
+    padding: 10px;
+}
+
+.info_Ekspert_block{
+    font-size: 20px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.pib_Ekspert{
+    display: flex;
+    font-size: 26px;
+}
+
+.pib_Ekspert li{
+margin-left: 10px;
+}
+
+.block-footer{
+    margin: 0;
+    padding: 10px;
+    color: #fff;
+    font-size: 22px;
+}
+
+.kontakti{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adres{
+    padding-right: 60px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telegra img{
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.kontakti-icon{
+    padding-top: 10px;
+    line-height: 35px;
 }

@@ -1,0 +1,113 @@
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #32ece3;
+}
+
+.header__container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 0px 30px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+.header__logo{
+    border-radius: 50%;
+    background: url('../Project-Foto/compas.png')0 0/100% no-repeat;
+    position: relative;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+}
+
+.menu__link{
+    color: aliceblue;
+    font-size: 20px;
+    background-color: #066e69;
+    padding: 2px 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+}
+
+.menu__link:hover{
+    color: rgb(167, 167, 167);
+    border: 1px solid #ffffff;
+    transition: all 0.3s ease 0s;
+}
+
+.content-tur{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.name-turne{
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.Foto-turne{
+    width: 1080px;
+    border: 1px solid #fff;
+}
+
+.Opis-turne{
+    background: #066e69;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 1000px;
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.dogovir{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    background: #066e69;
+    margin: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.dogovir-tsena{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.dogovir-cknopka{
+    display: flex;
+    justify-content: center;
+}
+
+.dogovir-cknopka a{
+    background: #ff3f05;
+    color: #fff;
+    font-size: 22px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.Foto-magaz{
+    max-width: 400px;
+}

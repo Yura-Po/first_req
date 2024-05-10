@@ -9,7 +9,7 @@
             <nav class="menu__body">
                 <ul class="menu__list">
                     <li>
-                        <a href="" class="menu__link">Можливості</a>
+                        <a href="#" class="menu__link">Можливості</a>
                         <span class="menu__arrow"></span>
                         <ul class="menu__sub-list">
                             <li>
@@ -29,8 +29,9 @@
                             
                         </ul>
                     </li>
-                    <li><a href="" class="menu__link">Про нас</a></li>
-                    <li><a href="" class="menu__link">Контакти</a></li>
+                    <!-- <li><a href="" class="menu__link">Про нас</a></li> -->
+                    <li><a href="modules/magaz.php" class="menu__link">Магазин</a></li>
+                    <li><a href="#" class="menu__link">Контакти</a></li>
                     <li><?php if($_SESSION['user']!= null){
                       echo '<a href="modules/logout.php" class="menu__link">Вихід</a></li>';  
                     }else{

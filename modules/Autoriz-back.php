@@ -48,6 +48,8 @@ if(mysqli_num_rows($check_user)> 0){
         "passWord"=> $user['passWord'],
         "Country"=> $user['Country'],
         "Foto"=> $user['Foto'],
+        "lvl_Dostup"=>$user['lvl_Dostup'],
+        "id_User"=>$user['id_User'],
 
     ];
 

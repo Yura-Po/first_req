@@ -55,5 +55,7 @@ if(iconMenu){
 const showAcaunt = document.querySelector('.span-akaunt');
 const Acaunt = document.querySelector('.profile');
 showAcaunt.addEventListener("click",function(e){
-Acaunt.classList.toggle("non-akaunt");
+Acaunt.classList.toggle('non-akaunt');
 });
+
+

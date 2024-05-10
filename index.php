@@ -4,6 +4,31 @@ include("modules/db_connect.php");
 ini_set('display_errors', 0);
 ini_set('display_startup_errors', 0);
 error_reporting(E_ALL);
+
+$sorting = $_GET["sort"];
+
+switch($sorting){
+    case 'price-desc';
+    $sorting = 'Tsena ASC';
+    $sort_name = ':Від дешевшого до дорожчого';
+    break;
+
+    case 'price-asc';
+    $sorting = 'Tsena DESC';
+    $sort_name = ':Від дорожчого до дешевшого';
+    break;
+
+    case 'county';
+    $sorting = 'Name_Contr';
+    $sort_name = ':Від А до Я...';
+    break;
+
+    default:
+    $sorting = 'id_Diving DESC';
+    $sort_name = '';
+    break;
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,16 +75,83 @@ echo'</p><p><a href="modules/SmenaDaniiAka.php">Змінити дані акау
 
 <div class="block-content">
 
+ <div class="sort-poshuk">
+    <div class="sort-vipad">
+        <div class="sort">Сортування<?=$sort_name;?></div>
+        <div class="sort-block none-sort">
+            <a href="index.php?sort=price-desc">Від дешевшого...</a>
+            <a href="index.php?sort=price-asc">Від дорожчого...</a>
+            <a href="index.php?sort=county">Від А до Я...</a>
+        </div></div>
+    </div>
+
+<ul> 
+<?php
+$result = mysqli_query($link,"SELECT * FROM Daiving ORDER BY $sorting");
+
+    if(mysqli_num_rows($result)>0){
+        $row = mysqli_fetch_array($result);
+
+        do{
+            echo '
+            <li>
+            <ul class="daiving"><div class="daiving-name">
+                <li>'.$row["Name_Contr"].'</li>
+                <li>'.$row["Date"].'</li>
+                </div>
+                <div class="daiving-opis">
+                <li><img class="img-daiving" src="Project-Foto/Daiving/'.$row["Mini_Foto"].'" ></li>
+                <li class="li-opis">'.$row["mini_Opis"].'</li>
+                </div>
+                <div class="daiving-Tsena">
+                <li>Ціна: '.$row["Tsena"].' грн.</li>
+                <a class="daiving-Button" href="modules/Tur.php?id_Diving='.$row["id_Diving"].'">Сторінка Туру</a>
+                </div>
+            </ul>
+            </li>
+            ';
+        }while($row = mysqli_fetch_array($result));
+    }
+?>
+</ul>
 </div>
 
-<div class="block-right"></div>
-
 </div>
 
+<div class="block-Ekspert">
+    <div class="text_Ekspert">Експерти по дайвінгу</div>
+    
+    <ul> 
+<?php
+$Ekspert = mysqli_query($link,"SELECT * FROM Ekspert");
+
+    if(mysqli_num_rows($Ekspert)>0){
+        $row = mysqli_fetch_array($Ekspert);
+
+        do{
+            echo '
+            <div class="info_Ekspert">
+            <li><img class="ekspert_foto" src="Project-Foto/'.$row["Foto_Ekspert"].'" ></li>
+            <div class="info_Ekspert_block">
+            <div class="pib_Ekspert">
+            <li>'.$row["Name_Ekspert"].'</li>
+            <li>'.$row["SurName_Ekspert"].'</li>
+            </div>
+            <li>'.$row["Opis_Ekspert"].'</li>
+            </div>
+            </div>
+            ';
+        }while($row = mysqli_fetch_array($Ekspert));
+    }
+?>
+</ul>
+    
+</div>
 <?php
 include("modules/block-footer.php");
 ?>
     </div>
     <script src="js/add.js"></script>
+    <script src="js/sort.js"></script>
 </body>
 </html>

@@ -1,0 +1,84 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block_form{
+    border: 2px solid #066e69;
+    background: #fff;
+}
+
+form{
+display: flex;
+flex-direction: column;
+color: #066e69;
+font-size: 22px; 
+height: 300px;
+}
+
+.date{
+    color: #066e69;
+    font-size: 20px;
+}
+
+.expert{
+    color: #066e69;
+    font-size: 20px;
+}
+
+.read{
+    cursor:auto;
+    font-size: 20px;
+    color: #066e69;
+
+}
+
+.orenda-type{
+    color: #066e69;
+    font-size: 18px;
+}
+
+.otstup{
+    margin: 10px 10px;
+}
+
+.golovna{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.golovna button{
+    background: #066e69;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.golovna a{
+    font-size: 20px;
+    color: #066e69;
+    margin: 10px;
+}
+
+.error_{
+    border-bottom: 2px solid #f10808;
+}
+
+.msg{
+    border: 2px solid #e9380b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.none{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
