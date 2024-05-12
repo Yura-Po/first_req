@@ -1,0 +1,59 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_koment{
+    width: 400px;
+    height: 400px;
+    background-color: #069790;
+    border: 2px solid #066e69;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+
+.btn-koment{
+    background-color: #e27b04;
+    color: #fff;
+    font-size: 20px;
+    border-left: 1px solid #000 ;
+    border-right: 1px solid #000 ;
+    border-bottom: 1px solid #000 ;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-koment:hover{
+    background-color: #fa8704;
+    transition: all 0.3s ease 0s;
+}
+
+.text_Ko{
+    resize: none;
+    border-left: 1px solid #000 ;
+    border-right: 1px solid #000 ;
+    border-top: 1px solid #000 ;
+}
+
+.msg{
+    border: 2px solid #e9380b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.error_{
+    border-bottom: 2px solid #e9380b;
+}
+
+.none{
+    display: none;
+}

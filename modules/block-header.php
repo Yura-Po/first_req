@@ -26,7 +26,15 @@
                         echo '';
                     }
                     ?>
-                            
+                             </li>
+                            <?php if($_SESSION['user']!=null){
+                      echo '<li>
+                      <a href="modules/Admin-tur.php" class="menu__sub-link">Заявки</a>
+                      </li>';  
+                    }else{
+                        echo '';
+                    }
+                    ?>
                         </ul>
                     </li>
                     <!-- <li><a href="" class="menu__link">Про нас</a></li> -->

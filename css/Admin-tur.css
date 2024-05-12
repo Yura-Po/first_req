@@ -1,0 +1,106 @@
+.block-body-tur{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-turne{
+    max-width: 1150px;
+    border: 2px solid #fff;
+    color: #fff;
+    margin: 20px 0px;
+}
+
+.img-turneket{
+    max-width: 200px;
+}
+
+.poslugi{
+    border: 1px solid #fff;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.block-name-sur-fah{
+    display: flex;
+}
+
+.block-name-sur-fah li{
+    margin-left: 10px;
+    }
+
+.block-name-sur-fah li:first-child{
+margin-left: 0;
+}
+
+.koristuvach{
+    border: 1px solid #fff;
+    margin: 10px;
+    padding: 10px;
+
+font-size: 20px;
+line-height: 25px;
+}
+
+
+.name-countri{
+    font-size: 20px;
+    margin: 10px;
+    line-height: 30px;
+}
+
+.kartinka-opis{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    margin: 10px;
+}
+
+.opis-kratkii{
+    margin: 20px 0px 0px 20px;
+    font-size: 20px;
+}
+
+.knopki{
+    display: flex;
+    margin: 10px;
+}
+
+.pidtverditi{
+    border: 1px solid #02806b;
+    background: #066e69;
+    color: #fff;
+    font-size: 20px;
+    padding: 3px 10px 5px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease 0s;
+}
+
+.pidtverditi:hover{
+    border: 1px solid #03a187;
+    background: #04534f;
+    color: #e6e1e1;
+    transition: all 0.3s ease 0s;
+}
+
+.vidmoviti{
+    border: 1px solid #ffffff;
+    background: #fd1f02;
+    color: #e9e9e9;
+    font-size: 20px;
+    padding: 3px 10px 5px 10px;
+    border-radius: 3px;
+    margin-left: 10px; 
+    transition: all 0.3s ease 0s;
+}
+
+.vidmoviti:hover{
+    border: 1px solid #ffffff;
+    background: #da1c03;
+    color: #d8d7d7;
+    transition: all 0.3s ease 0s;
+}
