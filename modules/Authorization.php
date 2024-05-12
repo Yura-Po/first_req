@@ -30,6 +30,9 @@ if($_SESSION['user']){
     <img class="sauron" src="../Project-Foto/118191.png">
     </div>
     </div>
+    <div class="kapcha"><img src="../Project-Foto/capcha.png">
+    <input type="text" name="capchaMe" placeholder="Введіть відповідь...">
+    </div>
     <button type="submit" class="button_form login-btn">Увійти</button>
     <div class="silki-div"><a href="#" class="silki-a">Забули пароль?</a>
     <a href="Registration.php" class="silki-a">Реєстрація</a>

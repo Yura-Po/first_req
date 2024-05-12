@@ -12,12 +12,6 @@
                         <a href="#" class="menu__link">Можливості</a>
                         <span class="menu__arrow"></span>
                         <ul class="menu__sub-list">
-                            <li>
-                            <a href="" class="menu__sub-link">Тур</a>
-                            </li>
-                            <li>
-                            <a href="" class="menu__sub-link">Залишити відгук</a>
-                            </li>
                             <?php if($_SESSION['user']!= null){
                       echo '<li>
                       <span class="menu__sub-link span-akaunt">Акаунт</span>
@@ -35,11 +29,14 @@
                         echo '';
                     }
                     ?>
+                    <li><?php if($_SESSION['user']['lvl_Dostup']== 1){
+                      echo '<a href="modules/NewTur.php" class="menu__sub-link">Створити тур</a></li>';  
+                    }
+                    ?>
                         </ul>
                     </li>
                     <!-- <li><a href="" class="menu__link">Про нас</a></li> -->
                     <li><a href="modules/magaz.php" class="menu__link">Магазин</a></li>
-                    <li><a href="#" class="menu__link">Контакти</a></li>
                     <li><?php if($_SESSION['user']!= null){
                       echo '<a href="modules/logout.php" class="menu__link">Вихід</a></li>';  
                     }else{

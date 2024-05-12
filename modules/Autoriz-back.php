@@ -4,6 +4,7 @@ include("db_connect.php");
 
 $Email = $_POST['Email'];
 $passWord = $_POST['passWord'];
+$capchaMe = $_POST['capchaMe'];
 
 $error_fields=[];
 
@@ -14,6 +15,11 @@ if($Email == ''){
 if($passWord == ''){
     $error_fields[]='passWord';
 }
+
+if($capchaMe == ''){
+    $error_fields[]='capchaMe';
+}
+
 
 if(!empty($error_fields)){
 
@@ -28,6 +34,26 @@ echo json_encode($response);
 
     die();
 }
+
+if(!($capchaMe == "72")){
+    
+    $error_fields[]='capchaMe';
+
+}
+
+if(!empty($error_fields)){
+
+    $response = [
+        "status"=>false,
+        "type" => 1,
+        "message"=>"Капча не пройдена...",
+        "fields" => $error_fields
+    ];
+    
+    echo json_encode($response);
+    
+        die();
+    }
 
 $passWord = md5($passWord);
 

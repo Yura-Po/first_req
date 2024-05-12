@@ -100,7 +100,7 @@ $result = mysqli_query($link,"SELECT * FROM Daiving ORDER BY $sorting");
                 <li>'.$row["Date"].'</li>
                 </div>
                 <div class="daiving-opis">
-                <li><img class="img-daiving" src="Project-Foto/Daiving/'.$row["Mini_Foto"].'" ></li>
+                <li><img class="img-daiving" src="'.$row["Mini_Foto"].'" ></li>
                 <li class="li-opis">'.$row["mini_Opis"].'</li>
                 </div>
                 <div class="daiving-Tsena">

@@ -16,7 +16,8 @@ showPassword.addEventListener("click",function(e){
         $(`input`).removeClass('error_');
 
         let Email = $('input[name="Email"]').val(),
-         passWord = $('input[name="passWord"]').val();
+         passWord = $('input[name="passWord"]').val(),
+         capchaMe = $('input[name="capchaMe"]').val();
 
          $.ajax({
             url: '../modules/Autoriz-back.php',
@@ -24,7 +25,8 @@ showPassword.addEventListener("click",function(e){
             dataType: 'json',
             data:{
                 Email: Email,
-                passWord: passWord
+                passWord: passWord,
+                capchaMe:capchaMe
             },
             success (data){
                 if(data.status){

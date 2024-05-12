@@ -24,7 +24,7 @@ if(mysqli_num_rows($foto)>0){
 
     do{
     $turTitle=$row["Name_Contr"];
-      $turFoto="../Project-Foto/Daiving/".$row["Foto"]."";
+      $turFoto="../".$row["Foto"]."";
       $turPrice=$row["Tsena"];
           
     }while($row = mysqli_fetch_array($foto));

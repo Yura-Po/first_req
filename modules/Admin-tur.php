@@ -125,7 +125,7 @@ $result = mysqli_query($link,"SELECT * FROM `Turne` WHERE `visible`='0'");
             </div>
             <div class="kartinka-opis">
             <li class="opis-kratkii">'.$rowb['mini_Opis'].'</li>
-            <li><img class="img-turneket" src="../Project-Foto/Daiving/'.$rowb['Foto'].'"></li></div>
+            <li><img class="img-turneket" src="../'.$rowb['Foto'].'"></li></div>
             </div>
             <div class="knopki">
             <li><a class="pidtverditi" href="Admin-back.php?id_tur='.$row["id_Saiava"].'&visible=1">Підтвердити</a></li>
@@ -197,7 +197,7 @@ $result = mysqli_query($link,"SELECT * FROM `Turne` WHERE `visible`='0'");
             </div>
             <div class="kartinka-opis">
             <li class="opis-kratkii">'.$rowb['mini_Opis'].'</li>
-            <li><img class="img-turneket" src="../Project-Foto/Daiving/'.$rowb['Foto'].'"></li></div>
+            <li><img class="img-turneket" src="../'.$rowb['Foto'].'"></li></div>
             </div>
             <div class="knopki">
             <li><a class="pidtverditi" href="Koment.php?id_Diving='.$turDaiving.'&id_koristuvach='.$user_id.'">Уже повернулися?</a></li>

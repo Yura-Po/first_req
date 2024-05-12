@@ -38,7 +38,7 @@ $result = mysqli_query($link,"SELECT * FROM Daiving WHERE `id_Diving` = '$id_Div
     <link rel="shortcut icon" href="../Project-Foto/iconCompas.png" type="image/png">
     <title><?=$title?></title>
 </head>
-<body style="background: url(../Project-Foto/Daiving/<?=$img?>)0 0/100% no-repeat fixed;">
+<body style="background: url(../<?=$img?>)0 0/100% no-repeat fixed;">
     
 <div class="form_koment">
     <form >

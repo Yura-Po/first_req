@@ -22,7 +22,7 @@ if(mysqli_num_rows($foto)>0){
 
     do{
     $turTitle=$row["Name_Contr"];
-      $turFoto="../Project-Foto/Daiving/".$row["Foto"]."";
+      $turFoto="../".$row["Foto"]."";
           
     }while($row = mysqli_fetch_array($foto));
 }
@@ -71,7 +71,7 @@ $result = mysqli_query($link,"SELECT * FROM `Daiving` WHERE `id_Diving`='$id_Tur
             <li>
             <ul class="content-tur">
                 <div class="name-turne"><li>'.$row["Name_Contr"].'</li></div>
-                <li><img class="Foto-turne" src="../Project-Foto/Daiving/'.$row["Foto"].'" ></li>
+                <li><img class="Foto-turne" src="../'.$row["Foto"].'" ></li>
                 <div class="Opis-turne"><li>'.$row["Opis"].'</li></div>
                 <div class="dogovir">
                 <div class="dogovir-tsena">
@@ -86,8 +86,51 @@ $result = mysqli_query($link,"SELECT * FROM `Daiving` WHERE `id_Diving`='$id_Tur
     }
 ?>
 </ul>
+</div>
+    <div class="block-koment-title">Коментарі</div>
+    <div class="block-koment">
+    <ul> 
 
+<?php
+$result = mysqli_query($link,"SELECT * FROM `Koment` WHERE `id_Daiving`='$id_Tur'");
+    if(mysqli_num_rows($result)>0){
+        $row = mysqli_fetch_array($result);
+
+        do{
+
+            $userid=$row["id_User"];
+            $Userino = mysqli_query($link,"SELECT * FROM `User` WHERE `id_User`='$userid'");
+            if(mysqli_num_rows($Userino)>0){
+                $rowu = mysqli_fetch_array($Userino);
+        
+                do{
+                    
+                    echo '
+                    <li>
+                    <ul class="content-koment">
+                        <div class="foto-title-user-date-koment">
+                        <div class="foto-title-user-date">
+                        <div class="foto-title-user">
+                        <li><img class="fotoUser" src="../'.$rowu["Foto"].'"></li>
+                        <div class="user-name-ser-fah">
+                        <li>'.$rowu["SurName"].'</li>
+                        <li>'.$rowu["Name"].'</li>
+                        <li>'.$rowu["Father"].'</li></div></div>
+                        <li>'.$row["date"].'</li></div>
+                        <div class="koment-block"><li>'.$row["Text_Koment"].'</li></div></div>
+                    </ul>
+                    </li>
+                    '; 
+                }while($rowu = mysqli_fetch_array($Userino));
+            }
+
+            
+        }while($row = mysqli_fetch_array($result));
+    }
+?>
+</ul>
     </div>
+    
 </body>
 </html>
 

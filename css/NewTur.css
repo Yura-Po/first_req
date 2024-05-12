@@ -1,0 +1,77 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1000px;
+}
+
+.forma-NewTur{   
+    border: 2px solid #fff;
+    width: 500px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.label-NewTur{
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0px;
+}
+
+input{
+    font-size: 20px;
+}
+
+.input-foto{
+    color: #fff;
+}
+
+textarea{
+    font-size: 20px;
+    resize: none;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.button-NewTur{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0px;
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+    transition: all 0.5s ease 0s;
+}
+
+.button-NewTur:hover{
+    color: #000;
+    background: #fff;
+    border: 1px solid #000;
+    transition: all 0.5s ease 0s;
+}
+
+
+.msg{
+    border: 2px solid #e9380b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.none{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.error_{
+    border-bottom: 2px solid #e9380b;
+}

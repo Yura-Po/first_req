@@ -111,3 +111,63 @@
 .Foto-magaz{
     max-width: 400px;
 }
+
+.block-koment-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.fotoUser{
+    max-width: 70px;
+    border-radius: 50%;
+}
+
+.user-name-ser-fah{
+    display: flex;   
+}
+
+.user-name-ser-fah li{
+    margin-left: 10px;   
+}
+
+.user-name-ser-fah li:first-child{
+    margin-left: 20px;   
+}
+
+.foto-title-user{
+    display: flex;
+    align-items: center;
+}
+
+.foto-title-user-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #066e69;
+}
+
+.foto-title-user-date-koment{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #fff;
+    margin: 20px;
+    height: 200px;
+    width: 600px;
+    background: #1a9b94;
+    font-size: 20px;
+    color: #fff;
+}
+
+.koment-block{
+margin: 20px;
+}
+
+.content-koment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
